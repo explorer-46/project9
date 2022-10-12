@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarsComponent } from './cars/cars.component';
 import { RouterModule, Routes } from '@angular/router';
+import{HttpClientModule} from '@angular/common/http'
 
 const link:Routes=[
   {path:"",component:CarsComponent}
@@ -20,6 +21,7 @@ const link:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(link)
   ],
   providers: [],
