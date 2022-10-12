@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <table class="table table-secondary">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Model</th>
+            <th scope="col">Color</th>
+            <th scope="col">Model year</th>
+            <th scope="col">Car Vin</th>
+            <th scope="col">Price</th>
+            <th scope="col">Availablitity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of carData.cars">
+            <td>{{i.id}}</td>
+            <td>{{i.car}}</td>
+            <td>{{i.car_model}}</td>
+            <td>{{i.car_color}}</td>
+            <td>{{i.car_model_year}}</td>
+            <td>{{i.car_vin}}</td>
+            <td>{{i.price}}</td>
+            <td *ngIf="i.availability">
+              <div class="alert alert-success" role="alert">
+               Available
+              </div>
+            </td>
+            <td *ngIf="! i.availability">
+              <div class="alert alert-danger" role="alert">
+              Not Available
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
